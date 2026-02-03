@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
 import { useGithub } from './hooks/useGithub';
 import { useRepoStore } from './store/useRepoStore';
-import { 
-  Github, ExternalLink, Code2, Mail, Layout, 
-  Database, ShieldCheck, Zap, Monitor, Server, Smartphone 
-} from 'lucide-react';
+import { Github, Mail, Download, ExternalLink, Code2, Layout, Zap, Server, ShieldCheck } from 'lucide-react';
 
 function App() {
   const [username, setUsername] = useState('');
@@ -141,14 +138,33 @@ function App() {
       {/* PIE DE PÁGINA */}
       <footer className="py-20 text-center border-t border-slate-800">
         <h2 className="text-3xl font-bold text-white mb-8">¿Listo para el siguiente nivel?</h2>
-        <div className="flex justify-center gap-6">
-          <a href="#" className="p-4 bg-slate-800 rounded-full hover:bg-blue-600 transition-all group">
-            <Github className="text-slate-400 group-hover:text-white" />
-          </a>
-          <a href="#" className="p-4 bg-slate-800 rounded-full hover:bg-blue-600 transition-all group">
-            <Mail className="text-slate-400 group-hover:text-white" />
-          </a>
-        </div>
+        {/* SECCIÓN DE CONTACTO Y RECURSOS */}
+<div className="flex flex-col sm:flex-row justify-center items-center gap-6 mt-10">
+  
+  <a 
+    href="/docs/Ficha_Tecnica_Showcase.pdf" 
+    download="Ficha_Tecnica_Grillete.pdf"
+    className="flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white rounded-xl font-bold transition-all shadow-lg shadow-blue-600/20"
+  >
+    <Download size={18} /> Descargar Ficha Técnica (PDF)
+  </a>
+
+  <a 
+    href="https://github.com/grilletee" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="flex items-center gap-2 px-6 py-3 bg-slate-800 hover:bg-slate-700 text-white rounded-xl border border-slate-700 transition-all"
+  >
+    <Github size={18} /> Mi GitHub
+  </a>
+
+  <a 
+    href="mailto:grillete07@gmail.com"
+    className="flex items-center gap-2 px-6 py-3 bg-slate-800 hover:bg-slate-700 text-white rounded-xl border border-slate-700 transition-all"
+  >
+    <Mail size={18} /> grillete07@gmail.com
+  </a>
+</div>
         <p className="mt-10 text-slate-500 text-sm">
           © 2026 - Desarrollado bajo estándares de la Feria de Empleo.
         </p>
