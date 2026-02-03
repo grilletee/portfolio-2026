@@ -1,16 +1,24 @@
-# React + Vite
+# Showcase Frontend: GitHub Skill Analyzer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Proyecto desarrollado para la Feria de Empleo como demostración de competencias en React y frameworks modernos. El objetivo es presentar una solución técnica profesional evaluable en menos de 3 minutos.
 
-Currently, two official plugins are available:
+## Enfoque Técnico
+Este showcase se centra en la arquitectura y la gestión de estado, utilizando un stack moderno para garantizar performance y mantenibilidad: 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* **React + Vite**: Setup ágil y renderizado eficiente. 
+* **Zustand**: Gestión de estado global ligera para el manejo de repositorios. 
+* **Custom Hooks**: Lógica de fetching y estados asíncronos encapsulada en `useGithub.js`. 
+* **Tailwind CSS v4**: Interfaz responsive y limpia sin hojas de estilo pesadas. 
 
-## React Compiler
+## Estructura del Proyecto
+Siguiendo las buenas prácticas sugeridas, el código se organiza de forma modular: 
+* `src/components`: UI reutilizable.
+* `src/store`: Store de Zustand para el estado global. 
+* `src/hooks`: Lógica de negocio extraída del componente. 
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Perfil Profesional
+Soy estudiante de DAM con experiencia previa construyendo aplicaciones Full Stack (Spring Boot + Angular). En este proyecto aplico conceptos de reactividad similares a los usados en Angular Signals para demostrar versatilidad tecnológica.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Entregables
+* **Demo**: https://showcase-frontend-jade.vercel.app/ 
+* **Ficha Técnica**: Disponible en la carpeta `/docs`. 
