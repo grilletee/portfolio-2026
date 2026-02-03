@@ -149,7 +149,7 @@ function App() {
         <h2 className="text-3xl font-bold text-white mb-10">¿Hablamos?</h2>
         <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
           <a 
-            href="/docs/Ficha_Tecnica_Showcase_Frontend_Profesional.pdf" 
+            href="/docs/Ficha Técnica_ Showcase Frontend Profesional.pdf" 
             download 
             className="flex items-center gap-2 px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white rounded-2xl font-bold transition-all shadow-xl shadow-blue-600/20"
           >
