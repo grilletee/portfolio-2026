@@ -10,7 +10,7 @@ function App() {
       
       {/* Navbar */}
       <div className="max-w-6xl mx-auto px-6 pt-8 flex justify-between items-center">
-        <span className="text-sm font-mono text-blue-500 tracking-tighter">&lt;guillermo.dev /&gt;</span>
+        <span className="text-sm font-mono text-blue-500 tracking-tighter">&lt;grillete.dev /&gt;</span>
         <div className="h-px flex-1 bg-gradient-to-r from-blue-500/50 to-transparent ml-4 opacity-20"></div>
       </div>
 
