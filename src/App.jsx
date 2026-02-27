@@ -1,10 +1,22 @@
 import React from 'react';
 import { 
   Github, Mail, Layout, ShieldCheck, Zap, Server, Terminal, 
-  Cpu, Coffee, BookOpen, Layers, QrCode, ExternalLink
+  Cpu, Coffee, BookOpen, Layers, QrCode, ExternalLink, Linkedin
 } from 'lucide-react';
 
 function App() {
+  // Array de tecnologías con los nombres exactos para cargar los logos reales
+  const technologies = [
+    { name: "Spring Boot", icon: "springboot", color: "6DB33F", sub: "Backend & Auth" },
+    { name: "Angular", icon: "angular", color: "DD0031", sub: "Signals & RxJS" },
+    { name: "React", icon: "react", color: "61DAFB", sub: "UI & Componentes" },
+    { name: "TypeScript", icon: "typescript", color: "3178C6", sub: "Tipado Estricto" },
+    { name: "Tailwind CSS", icon: "tailwindcss", color: "06B6D4", sub: "Diseño Responsive" },
+    { name: "Python", icon: "python", color: "3776AB", sub: "Scripting & Tools" },
+    { name: "Arduino", icon: "arduino", color: "00979D", sub: "C++ & Hardware IoT" },
+    { name: "Git", icon: "git", color: "F05032", sub: "Control de Versiones" }
+  ];
+
   return (
     <div className="min-h-screen bg-[#0f172a] text-slate-200 font-sans selection:bg-blue-500/30 overflow-x-hidden">
       
@@ -64,21 +76,22 @@ function App() {
         </div>
       </section>
 
-      {/* Tech Stack */}
+      {/* Tech Stack - SIMETRÍA PERFECTA Y LOGOS REALES */}
       <section className="py-16 max-w-6xl mx-auto px-6">
-        <h2 className="text-xl font-bold text-slate-500 mb-8 uppercase tracking-widest text-center md:text-left">Arsenal Tecnológico</h2>
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-          {[
-            { icon: <Server className="text-red-500" />, title: "Spring Boot", sub: "Security / JPA" },
-            { icon: <Zap className="text-yellow-400" />, title: "Angular", sub: "Signals / RXJS" },
-            { icon: <Cpu className="text-green-500" />, title: "Arduino / C++", sub: "IoT & Sensores" },
-            { icon: <Terminal className="text-blue-400" />, title: "Python", sub: "Scripting / Tools" },
-            { icon: <Layout className="text-cyan-400" />, title: "Tailwind", sub: "Responsive UI" }
-          ].map((tech, i) => (
-            <div key={i} className="flex flex-col items-center p-4 bg-white/5 border border-white/5 rounded-xl hover:bg-white/10 transition-all group hover:-translate-y-1">
-              <div className="mb-2 group-hover:scale-110 transition-transform">{tech.icon}</div>
-              <span className="text-sm font-bold text-white">{tech.title}</span>
-              <span className="text-[10px] text-slate-500 uppercase">{tech.sub}</span>
+        <h2 className="text-xl font-bold text-slate-500 mb-8 uppercase tracking-widest text-center md:text-left">Tecnologías</h2>
+        
+        {/* Usamos grid-cols-2 en móvil y md:grid-cols-4 en PC para tener 2 filas de 4 exactas */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          {technologies.map((tech, i) => (
+            <div key={i} className="flex flex-col items-center p-6 bg-white/5 border border-white/5 rounded-2xl hover:bg-white/10 transition-all group hover:-translate-y-1 shadow-lg">
+              {/* Cargamos el logo real oficial */}
+              <img 
+                src={`https://cdn.simpleicons.org/${tech.icon}/${tech.color}`} 
+                alt={`${tech.name} logo`} 
+                className="w-12 h-12 mb-4 group-hover:scale-110 transition-transform drop-shadow-md"
+              />
+              <span className="text-sm font-bold text-white text-center">{tech.name}</span>
+              <span className="text-[10px] text-slate-500 uppercase text-center mt-1">{tech.sub}</span>
             </div>
           ))}
         </div>
@@ -88,7 +101,7 @@ function App() {
       <section id="projects" className="py-20">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-3xl font-bold text-white mb-12 flex items-center gap-3">
-            <Layout className="text-blue-500" /> Proyectos Seleccionados
+            <Layout className="text-blue-500" /> Proyectos Destacados
           </h2>
           
           <div className="grid md:grid-cols-2 gap-6">
@@ -194,6 +207,9 @@ function App() {
           </a>
           <a href="mailto:grillete07@gmail.com" className="p-4 bg-white/5 rounded-full hover:bg-white/10 hover:text-white text-slate-400 transition-all">
             <Mail size={24} />
+          </a>
+          <a href="https://www.linkedin.com/in/guillermo-sanchez-gutierrez" target="_blank" rel="noopener noreferrer" className="p-4 bg-white/5 rounded-full hover:bg-white/10 hover:text-white text-slate-400 transition-all">
+            <Linkedin size={24} />
           </a>
         </div>
         <p className="mt-8 text-slate-600 text-xs">
