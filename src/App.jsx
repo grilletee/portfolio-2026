@@ -5,7 +5,6 @@ import {
 } from 'lucide-react';
 
 function App() {
-  // Array de tecnologías con los nombres exactos para cargar los logos reales
   const technologies = [
     { name: "Spring Boot", icon: "springboot", color: "6DB33F", sub: "Backend & Auth" },
     { name: "Angular", icon: "angular", color: "DD0031", sub: "Signals & RxJS" },
@@ -76,15 +75,13 @@ function App() {
         </div>
       </section>
 
-      {/* Tech Stack - SIMETRÍA PERFECTA Y LOGOS REALES */}
+      {/* Tech Stack */}
       <section className="py-16 max-w-6xl mx-auto px-6">
         <h2 className="text-xl font-bold text-slate-500 mb-8 uppercase tracking-widest text-center md:text-left">Tecnologías</h2>
         
-        {/* Usamos grid-cols-2 en móvil y md:grid-cols-4 en PC para tener 2 filas de 4 exactas */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {technologies.map((tech, i) => (
             <div key={i} className="flex flex-col items-center p-6 bg-white/5 border border-white/5 rounded-2xl hover:bg-white/10 transition-all group hover:-translate-y-1 shadow-lg">
-              {/* Cargamos el logo real oficial */}
               <img 
                 src={`https://cdn.simpleicons.org/${tech.icon}/${tech.color}`} 
                 alt={`${tech.name} logo`} 

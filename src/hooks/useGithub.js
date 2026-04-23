@@ -16,7 +16,7 @@ export const useGithub = () => {
       if (!response.ok) throw new Error('No se encontró el usuario');
       
       const data = await response.json();
-      setRepos(data); // Guardamos en el estado global
+      setRepos(data); 
     } catch (err) {
       setError(err.message);
     } finally {
